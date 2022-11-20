@@ -2,19 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ship : MonoBehaviour
+public abstract class Ship : MonoBehaviour, IControlable //abstraction
 {
-    public void Fly()
 
+    public virtual void Fly()
     {
-        Debug.Log("Ship is Fly");    
+        Debug.Log("Ship is Fly");
     }
 
-    public void Fair()
-
+    public virtual void Shot()
     {
-        Debug.Log("Ship is piu-piu-piu");
+        Debug.Log("Ship is Shot");
     }
-
-
 }

@@ -1,23 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class InputController : MonoBehaviour
 {
+    public GameObject selectedGameObject;
+    private IControlable controlableObject;
+
+void Start()
+    {
+        controlableObject = selectedGameObject.GetComponent<IControlable>();
+        //if (controlableObject == null)
+        //{
+        //    throw new NullReferenceException("selectedGameObject is not have IControlable interfase");
+        //}
+    }
 
     //encapsulation
-    public Ship ship;
-
     private void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.F))
         {
-            ship.Fly();
+            controlableObject.Fly();
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            ship.Fair();
+            controlableObject.Shot();
         }
     }
 }
