@@ -8,12 +8,10 @@ public class StatusController : MonoBehaviour
     //public TMPro.TextMeshProUGUI myText; 
     //public TMPro.TMP_Text myText;
 
-    public TMP_Text status;
+    public TMP_Text status; //{ get; set}
 
-    private void Start()
-    {
+    //[SerializeField] private TMP_Text statusText { get; set}
 
-    }
 
     public void SetStatusFly()
     {
@@ -22,12 +20,12 @@ public class StatusController : MonoBehaviour
 
     public void SetStatusShot()
     {
-        status.text = "Ship is Shot";
+        status.text = "Cruiser is Laser Shot";
     }
 
-    public void GiperJump()
+    public void SetGiperJump()
     {
-        status.text = "Ship is GiperJump";
+        status.text = "Cruiser is GiperJump";
     }
 
 }

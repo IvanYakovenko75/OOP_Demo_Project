@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class Cruiser : Ship, IControlable //Inheritance
 {
-    public void GiperJump()
+    [SerializeField] private StatusController statusController;
+
+    public void SetGiperJump()
     { 
         {
             Debug.Log("Cruiser is GiperJump");
@@ -18,7 +20,8 @@ public class Cruiser : Ship, IControlable //Inheritance
     {
         if (Input.GetKeyDown(KeyCode.G))
         {
-            GiperJump();
+            SetGiperJump();
+            statusController.SetGiperJump();
         }
     }
 

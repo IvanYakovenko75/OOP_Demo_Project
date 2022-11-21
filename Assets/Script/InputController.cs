@@ -7,14 +7,11 @@ public class InputController : MonoBehaviour
 {
     public GameObject selectedGameObject;
     private IControlable controlableObject;
+    [SerializeField] private StatusController statusController;
 
-void Start()
+    void Start()
     {
         controlableObject = selectedGameObject.GetComponent<IControlable>();
-        //if (controlableObject == null)
-        //{
-        //    throw new NullReferenceException("selectedGameObject is not have IControlable interfase");
-        //}
     }
 
     //encapsulation
@@ -23,11 +20,14 @@ void Start()
         if (Input.GetKeyDown(KeyCode.F))
         {
             controlableObject.Fly();
+            statusController.SetStatusFly();
+
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
             controlableObject.Shot();
+            statusController.SetStatusShot();
         }
     }
 }
