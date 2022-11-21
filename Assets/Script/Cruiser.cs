@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Cruiser : Ship, IControlable //Inheritance
 {
-    [SerializeField] private StatusController statusController;
+    public StatusController statusController;
 
     public void SetGiperJump()
     { 
