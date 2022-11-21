@@ -5,10 +5,8 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-
 public class SceneManager : MonoBehaviour
 {
-
     public void Exit()
     {
 #if UNITY_EDITOR
@@ -17,5 +15,4 @@ public class SceneManager : MonoBehaviour
         Application.Quit(); 
 #endif
     }
-
 }

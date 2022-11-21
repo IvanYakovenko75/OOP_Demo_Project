@@ -8,10 +8,18 @@ public class StatusController : MonoBehaviour
     //public TMPro.TextMeshProUGUI myText; 
     //public TMPro.TMP_Text myText;
 
-    public TMP_Text status; //{ get; set}
-
-    //[SerializeField] private TMP_Text statusText { get; set}
-
+    [SerializeField] private TMP_Text status;
+    public TMP_Text Status //encapsulation
+    {
+        get
+        {
+            return status;
+        }
+        set
+        {
+            status = value;
+        }
+    }
 
     public void SetStatusFly()
     {
