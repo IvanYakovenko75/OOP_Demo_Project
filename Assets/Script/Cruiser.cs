@@ -4,7 +4,6 @@ public class Cruiser : Ship, IControlable //Inheritance
 {
     public void GiperJump()
     { 
-    if (Input.GetKey(KeyCode.G))
         {
             Debug.Log("Cruiser is GiperJump");
         }
@@ -17,7 +16,10 @@ public class Cruiser : Ship, IControlable //Inheritance
 
     public void Update()
     {
-        GiperJump();
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            GiperJump();
+        }
     }
 
 }

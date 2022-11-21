@@ -20,12 +20,12 @@ void Start()
     //encapsulation
     private void Update()
     {
-        if (Input.GetKey(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             controlableObject.Fly();
         }
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             controlableObject.Shot();
         }
