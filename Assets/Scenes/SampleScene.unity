@@ -1631,7 +1631,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1000305216}
         m_TargetAssemblyTypeName: Cruiser, Assembly-CSharp
-        m_MethodName: GiperJump
+        m_MethodName: SetGiperJump
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
